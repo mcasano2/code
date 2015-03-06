@@ -1,0 +1,9 @@
+DESIGN @d@out_conn
+VIEW generated@instance
+NO_GRAPHIC 0
+DESIGN @d@out_conn
+VIEW generated@instance
+GRAPHIC 60,0 8 0 
+DESIGN @d@out_conn
+VIEW generated@instance
+GRAPHIC 647,0 24 8 

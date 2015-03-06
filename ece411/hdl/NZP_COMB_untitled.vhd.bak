@@ -1,0 +1,35 @@
+--
+-- VHDL Architecture ece411.NZP_COMB.untitled
+--
+-- Created:
+--          by - baker30.ews (gelib-057-15.ews.illinois.edu)
+--          at - 02:11:58 03/13/13
+--
+-- using Mentor Graphics HDL Designer(TM) 2012.1 (Build 6)
+--
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.NUMERIC_STD.all;
+
+LIBRARY ece411;
+USE ece411.LC3b_types.all;
+
+ENTITY NZP_COMB IS
+   PORT( 
+      clk        : IN     std_logic;
+      n          : IN     std_logic;
+      p          : IN     std_logic;
+      z          : IN     std_logic;
+      ex_nzp_out : OUT    LC3B_CC
+   );
+
+-- Declarations
+
+END NZP_COMB ;
+
+--
+ARCHITECTURE untitled OF NZP_COMB IS
+BEGIN
+  ex_nzp_out <= n & z & p;
+END ARCHITECTURE untitled;
+

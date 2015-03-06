@@ -1,0 +1,95 @@
+CS 225 TestSuite
+Testing lab07...
+
+Setting up test environment...
+Compiling...
+================================
+make: Warning: File `Makefile' has modification time 0.052 s in the future
+g++ -Wall -g -O0 -c runtests.cpp -o runtests.o
+g++ -Wall -g -O0 -c util.cpp -o util.o
+g++ -Wall -g -O0 -c unit_tests.cpp -o unit_tests.o
+g++ -Wall -g -O0 -c output.cpp -o output.o
+g++ runtests.o util.o unit_tests.o output.o -o runtests
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Running tests...
+================================
+test_isOrdered  . [40 pts] - passed
+test_mirror . . . [30 pts] - passed
+test_printPaths . [30 pts] - FAILED: Incorrect Terminal Output
+test_sumDistances [25 pts] - FAILED: unit_tests.cpp:139: Did not do sumDistances correctly: expected 19 but returned -1
+
+
+Total score (out of 100)...
+================================
+TOTAL SCORE: 70
+
+
+
+Detailed test output...
+================================
+--------------------------------
+test_isOrdered [40 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+              2                  
+          /       \              
+      9               1          
+    /   \           /            
+  6       0       8              
+ /         \     / \             
+7           3   4   5            
+                              6                                  
+                      /               \                          
+              3                               8                  
+          /       \                       /       \              
+      2               4               7               9          
+    /                   \                                        
+  1                       5                                      
+ /                                                               
+0                                                                
+
+--------------------------------
+test_mirror [30 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+              5                  
+          /       \              
+      7               3          
+    /   \           /   \        
+  8       6       4       1      
+ /                       / \     
+9                       2   0    
+
+--------------------------------
+test_printPaths [30 points]
+Result: FAILED: Incorrect Terminal Output
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+
+--------------------------------
+test_sumDistances [25 points]
+Result: FAILED: unit_tests.cpp:139: Did not do sumDistances correctly: expected 19 but returned -1
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+              5                  
+          /       \              
+      3               7          
+    /   \           /   \        
+  1       4       6       8      
+ / \                       \     
+0   2                       9    
+
+
+--------------------------------
+Total score (out of 100)...
+================================
+TOTAL SCORE: 70
+

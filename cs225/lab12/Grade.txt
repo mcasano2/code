@@ -1,0 +1,81 @@
+CS 225 TestSuite
+Testing lab12...
+
+Setting up test environment...
+Compiling...
+================================
+make: Warning: File `Makefile.runtests' has modification time 1.1 s in the future
+g++ -Wall -g -O0 -c string_hash.cpp -o string_hash.o
+string_hash.cpp: In member function ‘virtual unsigned int StringHash::operator()(const std::string&, int)’:
+string_hash.cpp:12: warning: comparison between signed and unsigned integer expressions
+g++ -Wall -g -O0 -c graph.cpp -o graph.o
+g++ -Wall -g -O0 -c kruskal.cpp -o kruskal.o
+g++ -Wall -g -O0 -c minweight.cpp -o minweight.o
+g++ -Wall -g -O0 -c minpath.cpp -o minpath.o
+g++ -Wall -g -O0 -c dsets.cpp -o dsets.o
+g++ -Wall -g -O0 -c runtests.cpp -o runtests.o
+g++ -Wall -g -O0 -c util.cpp -o util.o
+g++ -Wall -g -O0 -c unit_tests.cpp -o unit_tests.o
+g++ -Wall -g -O0 -c output.cpp -o output.o
+g++ string_hash.o graph.o kruskal.o minweight.o minpath.o dsets.o runtests.o util.o unit_tests.o output.o -o runtests
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Running tests...
+================================
+minWeightOneEdge . [20 pts] - passed
+minWeightMultiEdge [30 pts] - passed
+minPathOneEdge . . [20 pts] - passed
+minPathMultiEdge . [30 pts] - FAILED: unit_tests.cpp:103: marked a non-minimum path edge as "MIN"
+kruskal  . . . . . [25 pts] - FAILED: unit_tests.cpp:148: did not mark "MST" on minimum spanning tree edge
+
+
+Total score (out of 100)...
+================================
+TOTAL SCORE: 70
+
+
+
+Detailed test output...
+================================
+--------------------------------
+minWeightOneEdge [20 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+
+--------------------------------
+minWeightMultiEdge [30 points]
+Result: passed
+Took 1ms (1000ms timeout)
+Output:
+--------------------------------
+
+--------------------------------
+minPathOneEdge [20 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+
+--------------------------------
+minPathMultiEdge [30 points]
+Result: FAILED: unit_tests.cpp:103: marked a non-minimum path edge as "MIN"
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+
+--------------------------------
+kruskal [25 points]
+Result: FAILED: unit_tests.cpp:148: did not mark "MST" on minimum spanning tree edge
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+
+
+--------------------------------
+Total score (out of 100)...
+================================
+TOTAL SCORE: 70
+

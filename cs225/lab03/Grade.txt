@@ -1,0 +1,516 @@
+CS 225 TestSuite
+Testing lab03...
+
+Setting up test environment...
+Compiling...
+================================
+make: Warning: File `Makefile.runtests' has modification time 0.89 s in the future
+g++ -Wall -g -O0 -c apartment.cpp -o apartment.o
+g++ -Wall -g -O0 -c building.cpp -o building.o
+g++ -Wall -g -O0 -c testinvalidfree.cpp -o testinvalidfree.o
+g++ -Wall -g -O0 -c testmemoryleak.cpp -o testmemoryleak.o
+g++ -Wall -g -O0 -c runtests.cpp -o runtests.o
+g++ -Wall -g -O0 -c util.cpp -o util.o
+g++ -Wall -g -O0 -c unit_tests.cpp -o unit_tests.o
+g++ -Wall -g -O0 -c output.cpp -o output.o
+g++ apartment.o building.o testinvalidfree.o testmemoryleak.o runtests.o util.o unit_tests.o output.o -o runtests
+make: warning:  Clock skew detected.  Your build may be incomplete.
+
+
+Running tests...
+================================
+building_constructor . . . [0 pts]  - passed
+adding_apartments  . . . . [0 pts]  - passed
+adding_to_full_building  . [0 pts]  - passed
+removing_apt . . . . . . . [0 pts]  - passed
+creating_copy  . . . . . . [0 pts]  - passed
+adding_apt_to_copy . . . . [20 pts] - passed
+add_to_copy_with_NULL  . . [10 pts] - passed
+remove_index2_from_copy  . [20 pts] - passed
+add_apt_to_original  . . . [10 pts] - passed
+testbuilding (valgrind)  . [10 pts] - FAILED: Directly lost memory leaks
+testinvalidread (valgrind) [10 pts] - FAILED: Invalid read/write errors
+testmemoryleak (valgrind)  [10 pts] - passed
+testinvalidfree (valgrind) [10 pts] - FAILED: Invalid read/write errors
+
+
+Total score (out of 100)...
+================================
+TOTAL SCORE: 70
+
+
+
+Detailed test output...
+================================
+--------------------------------
+building_constructor [0 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+*****Printing building created from int constructor with no assigned apartments apartments.
+Building Info:
+Number of possible apartments: 4
+
+End Info
+
+
+--------------------------------
+adding_apartments [0 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+*****Printing full building with added apartments
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #241
+Bob
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+
+--------------------------------
+adding_to_full_building [0 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+*****Adding extra apartment (building already full)
+
+--------------------------------
+removing_apt [0 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+
+--------------------------------
+creating_copy [0 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+*Copy's contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+
+--------------------------------
+adding_apt_to_copy [20 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+*****Adding apartment to copy
+***Copy's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #567
+Eric
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+***Original's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #241
+Bob
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+
+--------------------------------
+add_to_copy_with_NULL [10 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+*****Adding apartment to copy
+***Copy's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #567
+Eric
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+***Original's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+
+--------------------------------
+remove_index2_from_copy [20 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+*****Removing apartment at index 2 from copy
+***Copy's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #567
+Eric
+
+Apartment #480
+Dennis
+
+End Info
+
+***Original's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+
+--------------------------------
+add_apt_to_original [10 points]
+Result: passed
+Took 0ms (1000ms timeout)
+Output:
+--------------------------------
+*****Adding one last apartment to the original
+***Copy's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #567
+Eric
+
+Apartment #480
+Dennis
+
+End Info
+
+***Original's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #621
+Fred
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+
+--------------------------------
+testbuilding (run under valgrind) [10 points]
+Result: FAILED: Directly lost memory leaks
+Took unknown time (5000ms timeout)
+Output:
+--------------------------------
+Running testbuilding [worth 10 points, output below]
+==1295== 16 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1295==    at 0x4A0666E: operator new(unsigned long) (vg_replace_malloc.c:220)
+==1295==    by 0x4032E5: Building::Building(Building const&) (building.cpp:28)
+==1295==    by 0x40E929: testbuilding(runtests::RunTests const&, runtests::unit_test&) (unit_tests.cpp:327)
+==1295==    by 0x404560: runtests::RunTests::child_test(runtests::unit_test&, util::pipestream<512ul>&, util::pipestream<512ul>&) (runtests.cpp:398)
+==1295==    by 0x404B79: runtests::RunTests::exec_unit_test(runtests::unit_test&, bool) (runtests.cpp:311)
+==1295==    by 0x405441: runtests::RunTests::run_single_test(char const*) (runtests.cpp:156)
+==1295==    by 0x4055D9: runtests::RunTests::execute() (runtests.cpp:103)
+==1295==    by 0x4059FC: main (runtests.cpp:66)
+==1295== 
+*****Adding one last apartment to the original
+***Copy's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #567
+Eric
+
+Apartment #480
+Dennis
+
+End Info
+
+***Original's Contents
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #621
+Fred
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+Result: passed
+
+--------------------------------
+testinvalidread (run under valgrind) [10 points]
+Result: FAILED: Invalid read/write errors
+Took unknown time (5000ms timeout)
+Output:
+--------------------------------
+Running testinvalidread [worth 10 points, output below]
+==1301== Invalid read of size 8
+==1301==    at 0x402F1B: Building::getTenantAt(int, std::string&) const (building.cpp:106)
+==1301==    by 0x40DE4D: testinvalidread(runtests::RunTests const&, runtests::unit_test&) (unit_tests.cpp:389)
+==1301==    by 0x404560: runtests::RunTests::child_test(runtests::unit_test&, util::pipestream<512ul>&, util::pipestream<512ul>&) (runtests.cpp:398)
+==1301==    by 0x404B79: runtests::RunTests::exec_unit_test(runtests::unit_test&, bool) (runtests.cpp:311)
+==1301==    by 0x405441: runtests::RunTests::run_single_test(char const*) (runtests.cpp:156)
+==1301==    by 0x4055D9: runtests::RunTests::execute() (runtests.cpp:103)
+==1301==    by 0x4059FC: main (runtests.cpp:66)
+==1301==  Address 0x4c393f8 is 8 bytes after a block of size 32 alloc'd
+==1301==    at 0x4A062CA: operator new[](unsigned long) (vg_replace_malloc.c:264)
+==1301==    by 0x4031CA: Building::Building(int) (building.cpp:16)
+==1301==    by 0x40DBE7: testinvalidread(runtests::RunTests const&, runtests::unit_test&) (unit_tests.cpp:375)
+==1301==    by 0x404560: runtests::RunTests::child_test(runtests::unit_test&, util::pipestream<512ul>&, util::pipestream<512ul>&) (runtests.cpp:398)
+==1301==    by 0x404B79: runtests::RunTests::exec_unit_test(runtests::unit_test&, bool) (runtests.cpp:311)
+==1301==    by 0x405441: runtests::RunTests::run_single_test(char const*) (runtests.cpp:156)
+==1301==    by 0x4055D9: runtests::RunTests::execute() (runtests.cpp:103)
+==1301==    by 0x4059FC: main (runtests.cpp:66)
+==1301== 
+*****Adding apartments...
+*****Printing full building with added apartments
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #241
+Bob
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+*****Getting apartment at index 5
+Out of bounds
+Result: passed
+
+--------------------------------
+testmemoryleak (run under valgrind) [10 points]
+Result: passed
+Took unknown time (5000ms timeout)
+Output:
+--------------------------------
+Running testmemoryleak [worth 10 points, output below]
+*****Printing full building with added apartments
+Building Info:
+Number of possible apartments: 4
+
+Apartment #123
+Adam
+
+Apartment #241
+Bob
+
+Apartment #395
+Charlie
+
+Apartment #480
+Dennis
+
+End Info
+
+Result: passed
+
+--------------------------------
+testinvalidfree (run under valgrind) [10 points]
+Result: FAILED: Invalid read/write errors
+Took unknown time (5000ms timeout)
+Output:
+--------------------------------
+Running testinvalidfree [worth 10 points, output below]
+==1305== Invalid read of size 8
+==1305==    at 0x40309F: Building::~Building() (building.cpp:45)
+==1305==    by 0x4036F8: __testinvalidfree_main(int, char**) (testinvalidfree.cpp:36)
+==1305==    by 0x40D777: testinvalidfree(runtests::RunTests const&, runtests::unit_test&) (unit_tests.cpp:429)
+==1305==    by 0x404560: runtests::RunTests::child_test(runtests::unit_test&, util::pipestream<512ul>&, util::pipestream<512ul>&) (runtests.cpp:398)
+==1305==    by 0x404B79: runtests::RunTests::exec_unit_test(runtests::unit_test&, bool) (runtests.cpp:311)
+==1305==    by 0x405441: runtests::RunTests::run_single_test(char const*) (runtests.cpp:156)
+==1305==    by 0x4055D9: runtests::RunTests::execute() (runtests.cpp:103)
+==1305==    by 0x4059FC: main (runtests.cpp:66)
+==1305==  Address 0x4c39190 is 0 bytes inside a block of size 8 free'd
+==1305==    at 0x4A053BF: operator delete[](void*) (vg_replace_malloc.c:368)
+==1305==    by 0x403101: Building::~Building() (building.cpp:48)
+==1305==    by 0x4036D6: __testinvalidfree_main(int, char**) (testinvalidfree.cpp:36)
+==1305==    by 0x40D777: testinvalidfree(runtests::RunTests const&, runtests::unit_test&) (unit_tests.cpp:429)
+==1305==    by 0x404560: runtests::RunTests::child_test(runtests::unit_test&, util::pipestream<512ul>&, util::pipestream<512ul>&) (runtests.cpp:398)
+==1305==    by 0x404B79: runtests::RunTests::exec_unit_test(runtests::unit_test&, bool) (runtests.cpp:311)
+==1305==    by 0x405441: runtests::RunTests::run_single_test(char const*) (runtests.cpp:156)
+==1305==    by 0x4055D9: runtests::RunTests::execute() (runtests.cpp:103)
+==1305==    by 0x4059FC: main (runtests.cpp:66)
+==1305== 
+==1305== Invalid write of size 8
+==1305==    at 0x4030D3: Building::~Building() (building.cpp:46)
+==1305==    by 0x4036F8: __testinvalidfree_main(int, char**) (testinvalidfree.cpp:36)
+==1305==    by 0x40D777: testinvalidfree(runtests::RunTests const&, runtests::unit_test&) (unit_tests.cpp:429)
+==1305==    by 0x404560: runtests::RunTests::child_test(runtests::unit_test&, util::pipestream<512ul>&, util::pipestream<512ul>&) (runtests.cpp:398)
+==1305==    by 0x404B79: runtests::RunTests::exec_unit_test(runtests::unit_test&, bool) (runtests.cpp:311)
+==1305==    by 0x405441: runtests::RunTests::run_single_test(char const*) (runtests.cpp:156)
+==1305==    by 0x4055D9: runtests::RunTests::execute() (runtests.cpp:103)
+==1305==    by 0x4059FC: main (runtests.cpp:66)
+==1305==  Address 0x4c39190 is 0 bytes inside a block of size 8 free'd
+==1305==    at 0x4A053BF: operator delete[](void*) (vg_replace_malloc.c:368)
+==1305==    by 0x403101: Building::~Building() (building.cpp:48)
+==1305==    by 0x4036D6: __testinvalidfree_main(int, char**) (testinvalidfree.cpp:36)
+==1305==    by 0x40D777: testinvalidfree(runtests::RunTests const&, runtests::unit_test&) (unit_tests.cpp:429)
+==1305==    by 0x404560: runtests::RunTests::child_test(runtests::unit_test&, util::pipestream<512ul>&, util::pipestream<512ul>&) (runtests.cpp:398)
+==1305==    by 0x404B79: runtests::RunTests::exec_unit_test(runtests::unit_test&, bool) (runtests.cpp:311)
+==1305==    by 0x405441: runtests::RunTests::run_single_test(char const*) (runtests.cpp:156)
+==1305==    by 0x4055D9: runtests::RunTests::execute() (runtests.cpp:103)
+==1305==    by 0x4059FC: main (runtests.cpp:66)
+==1305== 
+==1305== Invalid free() / delete / delete[]
+==1305==    at 0x4A053BF: operator delete[](void*) (vg_replace_malloc.c:368)
+==1305==    by 0x403101: Building::~Building() (building.cpp:48)
+==1305==    by 0x4036F8: __testinvalidfree_main(int, char**) (testinvalidfree.cpp:36)
+==1305==    by 0x40D777: testinvalidfree(runtests::RunTests const&, runtests::unit_test&) (unit_tests.cpp:429)
+==1305==    by 0x404560: runtests::RunTests::child_test(runtests::unit_test&, util::pipestream<512ul>&, util::pipestream<512ul>&) (runtests.cpp:398)
+==1305==    by 0x404B79: runtests::RunTests::exec_unit_test(runtests::unit_test&, bool) (runtests.cpp:311)
+==1305==    by 0x405441: runtests::RunTests::run_single_test(char const*) (runtests.cpp:156)
+==1305==    by 0x4055D9: runtests::RunTests::execute() (runtests.cpp:103)
+==1305==    by 0x4059FC: main (runtests.cpp:66)
+==1305==  Address 0x4c39190 is 0 bytes inside a block of size 8 free'd
+==1305==    at 0x4A053BF: operator delete[](void*) (vg_replace_malloc.c:368)
+==1305==    by 0x403101: Building::~Building() (building.cpp:48)
+==1305==    by 0x4036D6: __testinvalidfree_main(int, char**) (testinvalidfree.cpp:36)
+==1305==    by 0x40D777: testinvalidfree(runtests::RunTests const&, runtests::unit_test&) (unit_tests.cpp:429)
+==1305==    by 0x404560: runtests::RunTests::child_test(runtests::unit_test&, util::pipestream<512ul>&, util::pipestream<512ul>&) (runtests.cpp:398)
+==1305==    by 0x404B79: runtests::RunTests::exec_unit_test(runtests::unit_test&, bool) (runtests.cpp:311)
+==1305==    by 0x405441: runtests::RunTests::run_single_test(char const*) (runtests.cpp:156)
+==1305==    by 0x4055D9: runtests::RunTests::execute() (runtests.cpp:103)
+==1305==    by 0x4059FC: main (runtests.cpp:66)
+==1305== 
+==1305== 8 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1305==    at 0x4A062CA: operator new[](unsigned long) (vg_replace_malloc.c:264)
+==1305==    by 0x4031CA: Building::Building(int) (building.cpp:16)
+==1305==    by 0x4035B3: __testinvalidfree_main(int, char**) (testinvalidfree.cpp:23)
+==1305==    by 0x40D777: testinvalidfree(runtests::RunTests const&, runtests::unit_test&) (unit_tests.cpp:429)
+==1305==    by 0x404560: runtests::RunTests::child_test(runtests::unit_test&, util::pipestream<512ul>&, util::pipestream<512ul>&) (runtests.cpp:398)
+==1305==    by 0x404B79: runtests::RunTests::exec_unit_test(runtests::unit_test&, bool) (runtests.cpp:311)
+==1305==    by 0x405441: runtests::RunTests::run_single_test(char const*) (runtests.cpp:156)
+==1305==    by 0x4055D9: runtests::RunTests::execute() (runtests.cpp:103)
+==1305==    by 0x4059FC: main (runtests.cpp:66)
+==1305== 
+*****Printing building a
+Building Info:
+Number of possible apartments: 1
+
+Apartment #123
+Adam
+
+End Info
+
+*****Printing building b
+Building Info:
+Number of possible apartments: 1
+
+Apartment #123
+Adam
+
+End Info
+
+Result: passed
+
+
+--------------------------------
+Total score (out of 100)...
+================================
+TOTAL SCORE: 70
+

@@ -1,0 +1,72 @@
+CS 225 TestSuite
+Testing lab04...
+
+Setting up test environment...
+Compiling...
+================================
+g++ -Wall -g -O0 -c EasyBMP.cpp -o EasyBMP.o
+g++ -Wall -g -O0 -c vector2.cpp -o vector2.o
+g++ -Wall -g -O0 -c shape.cpp -o shape.o
+drawable.h:18: warning: ‘class cs225::Drawable’ has virtual functions but non-virtual destructor
+shape.h:21: warning: ‘class cs225::Shape’ has virtual functions but non-virtual destructor
+line.h:22: warning: ‘class cs225::Line’ has virtual functions but non-virtual destructor
+g++ -Wall -g -O0 -c rectangle.cpp -o rectangle.o
+drawable.h:18: warning: ‘class cs225::Drawable’ has virtual functions but non-virtual destructor
+shape.h:21: warning: ‘class cs225::Shape’ has virtual functions but non-virtual destructor
+rectangle.h:19: warning: ‘class cs225::Rectangle’ has virtual functions but non-virtual destructor
+g++ -Wall -g -O0 -c line.cpp -o line.o
+drawable.h:18: warning: ‘class cs225::Drawable’ has virtual functions but non-virtual destructor
+line.h:22: warning: ‘class cs225::Line’ has virtual functions but non-virtual destructor
+g++ -Wall -g -O0 -c flower.cpp -o flower.o
+drawable.h:18: warning: ‘class cs225::Drawable’ has virtual functions but non-virtual destructor
+shape.h:21: warning: ‘class cs225::Shape’ has virtual functions but non-virtual destructor
+flower.h:15: warning: ‘class cs225::Flower’ has virtual functions but non-virtual destructor
+circle.h:19: warning: ‘class cs225::Circle’ has virtual functions but non-virtual destructor
+rectangle.h:19: warning: ‘class cs225::Rectangle’ has virtual functions but non-virtual destructor
+triangle.h:21: warning: ‘class cs225::Triangle’ has virtual functions but non-virtual destructor
+g++ -Wall -g -O0 -c truck.cpp -o truck.o
+drawable.h:18: warning: ‘class cs225::Drawable’ has virtual functions but non-virtual destructor
+shape.h:21: warning: ‘class cs225::Shape’ has virtual functions but non-virtual destructor
+circle.h:19: warning: ‘class cs225::Circle’ has virtual functions but non-virtual destructor
+rectangle.h:19: warning: ‘class cs225::Rectangle’ has virtual functions but non-virtual destructor
+truck.h:18: warning: ‘class cs225::Truck’ has virtual functions but non-virtual destructor
+g++ -Wall -g -O0 -c circle.cpp -o circle.o
+drawable.h:18: warning: ‘class cs225::Drawable’ has virtual functions but non-virtual destructor
+shape.h:21: warning: ‘class cs225::Shape’ has virtual functions but non-virtual destructor
+circle.h:19: warning: ‘class cs225::Circle’ has virtual functions but non-virtual destructor
+g++ -Wall -g -O0 -c triangle.cpp -o triangle.o
+drawable.h:18: warning: ‘class cs225::Drawable’ has virtual functions but non-virtual destructor
+shape.h:21: warning: ‘class cs225::Shape’ has virtual functions but non-virtual destructor
+triangle.h:21: warning: ‘class cs225::Triangle’ has virtual functions but non-virtual destructor
+line.h:22: warning: ‘class cs225::Line’ has virtual functions but non-virtual destructor
+g++ -Wall -g -O0 -c runtests.cpp -o runtests.o
+g++ -Wall -g -O0 -c util.cpp -o util.o
+g++ -Wall -g -O0 -c unit_tests.cpp -o unit_tests.o
+drawable.h:18: warning: ‘class cs225::Drawable’ has virtual functions but non-virtual destructor
+shape.h:21: warning: ‘class cs225::Shape’ has virtual functions but non-virtual destructor
+circle.h:19: warning: ‘class cs225::Circle’ has virtual functions but non-virtual destructor
+triangle.h:21: warning: ‘class cs225::Triangle’ has virtual functions but non-virtual destructor
+rectangle.h:19: warning: ‘class cs225::Rectangle’ has virtual functions but non-virtual destructor
+truck.h:18: warning: ‘class cs225::Truck’ has virtual functions but non-virtual destructor
+flower.h:15: warning: ‘class cs225::Flower’ has virtual functions but non-virtual destructor
+unit_tests.cpp: In function ‘std::string test_drawable_destructor(const runtests::RunTests&, runtests::unit_test&)’:
+unit_tests.cpp:80: error: cannot allocate an object of abstract type ‘cs225::Truck’
+truck.h:18: note:   because the following virtual functions are pure within ‘cs225::Truck’:
+drawable.h:27: note: 	virtual void cs225::Drawable::draw(BMP*) const
+unit_tests.cpp: In function ‘std::string test_truck_draw(const runtests::RunTests&, runtests::unit_test&)’:
+unit_tests.cpp:93: error: cannot allocate an object of abstract type ‘cs225::Truck’
+truck.h:18: note:   since type ‘cs225::Truck’ has pure virtual functions
+make: *** [unit_tests.o] Error 1
+
+
+exec("./runtests") failed
+execl failed: No such file or directory
+Running tests...
+================================
+Could not execute test cases
+
+
+Total score (out of 100)...
+================================
+TOTAL SCORE: 0
+

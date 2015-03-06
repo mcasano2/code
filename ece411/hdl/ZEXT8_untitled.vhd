@@ -1,0 +1,32 @@
+--
+-- VHDL Architecture ece411.ZEXT8.untitled
+--
+-- Created:
+--          by - baker30.ews (gelib-057-11.ews.illinois.edu)
+--          at - 20:31:37 02/05/13
+--
+-- using Mentor Graphics HDL Designer(TM) 2012.1 (Build 6)
+--
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.NUMERIC_STD.all;
+
+LIBRARY ece411;
+USE ece411.LC3b_types.all;
+
+ENTITY ZEXT8 IS
+   PORT( 
+      MDRout  : IN     LC3b_word;
+      ZEXTout : OUT    LC3b_word
+   );
+
+-- Declarations
+
+END ZEXT8 ;
+
+--
+ARCHITECTURE untitled OF ZEXT8 IS
+BEGIN
+  ZEXTout <= x"00" & MDRout( 7 DOWNTO 0) AFTER DELAY_MUX2;
+END ARCHITECTURE untitled;
+

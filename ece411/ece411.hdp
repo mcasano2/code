@@ -1,0 +1,16 @@
+[ModelSim]
+ece411 = $HDS_PROJECT_DIR/compile
+[hdl]
+ece411 = /home/baker30/ece411/mp2/hdl
+[hds]
+ece411 = $HDS_PROJECT_DIR/hds
+[hds_settings]
+default_library = ece411
+design_root = ece411.mp2_CPU()mp2_@c@p@u/symbol.sb
+version = 2
+[library_files_inclusion]
+ece411 = specify
+[library_type]
+ece411 = regular
+[shared]
+others = $HDS_TEAM_HOME/shared.hdp

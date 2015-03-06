@@ -1,0 +1,239 @@
+DESIGN @stage_wb
+VIEW interface
+NO_GRAPHIC 0
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 50,0 8 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1169,0 17 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1109,0 18 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1114,0 19 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1124,0 20 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1139,0 21 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1144,0 22 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1149,0 23 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1119,0 24 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1129,0 25 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1134,0 26 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1154,0 27 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1159,0 28 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1164,0 29 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1,0 32 0 
+DESIGN @stage_wb
+VIEW interface
+GRAPHIC 1,0 33 0 
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 36
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 58,0 45 0 
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 51
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 0,0 53 2 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 443,0 58 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 407,0 59 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 453,0 60 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 353,0 61 0 
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 62
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 63
+LIBRARY ece411
+DESIGN @i@r2@dr
+VIEW untitled
+GRAPHIC 628,0 65 0 
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 69
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 600,0 71 0 
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 79
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 325,0 81 0 
+DESIGN @word@mux2
+VIEW untitled
+GRAPHIC 108,0 83 0 
+DESIGN @word@mux2
+VIEW untitled
+GRAPHIC 113,0 84 0 
+DESIGN @word@mux2
+VIEW untitled
+GRAPHIC 118,0 85 0 
+DESIGN @word@mux2
+VIEW untitled
+GRAPHIC 123,0 86 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 397,0 89 0 
+DESIGN @word@mux4
+VIEW untitled
+GRAPHIC 108,0 91 0 
+DESIGN @word@mux4
+VIEW untitled
+GRAPHIC 113,0 92 0 
+DESIGN @word@mux4
+VIEW untitled
+GRAPHIC 118,0 93 0 
+DESIGN @word@mux4
+VIEW untitled
+GRAPHIC 123,0 94 0 
+DESIGN @word@mux4
+VIEW untitled
+GRAPHIC 133,0 95 0 
+DESIGN @word@mux4
+VIEW untitled
+GRAPHIC 128,0 96 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 343,0 99 0 
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 103
+LIBRARY ece411
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 105
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 628,0 108 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 600,0 109 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 325,0 110 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 397,0 111 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 343,0 112 0 
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 115
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 117
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 628,0 119 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 245,0 121 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 231,0 122 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 600,0 124 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 203,0 126 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 301,0 127 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 435,0 128 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 675,0 129 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 445,0 130 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 751,0 131 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 325,0 133 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 217,0 135 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 355,0 136 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 435,0 137 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 409,0 138 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 397,0 140 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 409,0 142 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 189,0 143 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 273,0 144 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 259,0 145 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 445,0 146 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 287,0 147 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 343,0 149 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 359,0 151 0 
+DESIGN @stage_wb
+VIEW struct.bd
+GRAPHIC 355,0 152 0 
+DESIGN @stage_wb
+VIEW struct.bd
+NO_GRAPHIC 155

@@ -1,0 +1,5 @@
+should be stable for most instructions but needs testing
+ldi and sti dont work
+wrote all instructions
+Working forwarding and data hazard detection
+

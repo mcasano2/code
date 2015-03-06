@@ -1,0 +1,9 @@
+DESIGN reset@del
+VIEW generated@instance
+NO_GRAPHIC 0
+DESIGN reset@del
+VIEW generated@instance
+GRAPHIC 60,0 8 0 
+DESIGN reset@del
+VIEW generated@instance
+GRAPHIC 2870,0 24 8 

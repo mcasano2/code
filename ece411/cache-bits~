@@ -1,0 +1,5 @@
+2-way
+
+tag: 9 bits
+index: 3 bits -> 8 lines
+offset: 4 bits -> 16 bytes
