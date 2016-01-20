@@ -1,4 +1,3 @@
-# school
 
 CS 431 - Embedded Systems PID Controller in C
 
