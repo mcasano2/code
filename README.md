@@ -1,7 +1,6 @@
 # school
-School Projects
 
-S 431 - Embedded Systems PID Controller in C
+CS 431 - Embedded Systems PID Controller in C
 
 ECE391 - C Operating System
 
